@@ -1,11 +1,11 @@
-import { FieldsetHTMLAttributes } from "react"
+import { HTMLAttributes } from "react"
 
-type FieldsetProps = & FieldsetHTMLAttributes<HTMLFieldSetElement>
+type FieldsetProps = & HTMLAttributes<HTMLDivElement>
 
 export function Fieldset ({ children, className, ...props }: FieldsetProps) {
   return (
-    <fieldset {...props} className={`flex flex-col gap-2 ${className}`}>
+    <div className={`flex flex-col gap-2 ${className}`}>
       {children}
-    </fieldset>
+    </div>
   )
 }
